@@ -1,9 +1,6 @@
 
 function PhotoCard({photo}) {
 
-    function onFavoriteClick(){
-        alert("clicked")
-    }
 
     return <div className="photo-card">
 
@@ -12,11 +9,6 @@ function PhotoCard({photo}) {
                     <img src={photo.url} alt={photo.title}/>
 
                     <div className="photo-overlay">
-
-                        <button className="favorite-btn" onClick={onFavoriteClick}>
-                            ♥
-                        </button>
-
                     </div>
                     
                 </div>

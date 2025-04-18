@@ -101,7 +101,62 @@ button:focus-visible {
 
 .navbar-title {
   font-size: 10px;
-  font-family: cursive;
-  color: cyan;
+  font-family: Garamond;
+  color: rgb(255, 255, 255);
+
+}
+
+.home {
+  display: flex;
+  width: 85vw;
+  height: 70vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem; /* spacing between text and photo */
+}
+
+.home-text {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0rem 2rem;
+}
+
+.home-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem;
+}
+
+.photo-item{
+  width: 200%;
+  height: 200%;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+
+  .home-photo {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .home-text {
+    text-align: center;
+  }
 
 }
