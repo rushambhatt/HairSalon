@@ -1,5 +1,6 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;*/
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -106,32 +107,26 @@ button:focus-visible {
 
 }
 
-.home {
-  display: flex;
+.contact {
   width: 85vw;
   height: 70vh;
-  justify-content: space-between;
-  align-items: flex-start;
   padding: 2rem;
   gap: 2rem; /* spacing between text and photo */
 }
 
-.home-text {
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+.contact-text {
   padding: 0rem 2rem;
+  text-align: center;
 }
 
-.home-photo {
+.contact-photo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0rem;
 }
 
-.photo-item{
+.contact-item{
   width: 200%;
   height: 200%;
 }
@@ -141,22 +136,116 @@ button:focus-visible {
   height: auto;
   border-radius: 12px;
   height: 500px;
+  border-style: solid;
 }
 
+.home{
+  padding-top: 50px;
+}
+
+.home-photos{
+  display: flex;
+  padding: 0rem 2rem;
+  gap: 1rem;
+}
+
+.home-photo-item img {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.slideshow {
+  display: flex;
+  padding: 0rem 2rem;
+  gap: 1rem;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+
+
+.home-page-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.home-page-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  text-align: center;
+  width: 100%;
+  background-color: #ffe4ec;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4pxa 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.home-page-info-item:hover {
+  transform: scale(1.02);
+}
+
+.home-page-info-item img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  height: 500px;
+  border-style: solid;
+}
+
+.home-page-info-item h2{
+  font-family: "Garamond", serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.home-page-info-item p {
+  color: #444;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+
+
 @media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+
   .home {
     flex-direction: column;
     align-items: center;
     grid-template-columns: 1fr;
   }
 
-  .home-photo {
+  .contact-photo {
     max-width: 100%;
     margin-top: 1rem;
   }
 
-  .home-text {
+  .home-photos{
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .contact-text {
     text-align: center;
   }
 
 }
+
